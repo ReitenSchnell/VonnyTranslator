@@ -1,5 +1,6 @@
 VonnyTranslator::Application.routes.draw do
   get "vonny/home"
+  root :to => 'vonny#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
