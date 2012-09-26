@@ -1,10 +1,19 @@
 translate = function(str) {
-  var static_names = {};
-  static_names["Винни"] = "Вонни";
-  static_names["Вонни"] = "Вонни";
-  if (str in static_names)
+  var static_names = {  "винни" : "Вонни",
+                        "вонни" : "Вонни",
+                        "пятачок" : "Потачок",
+                        "потачок" : "Потачок",
+                        "сова" : "Своа",
+                        "своа" : "Своа",
+                        "курорт" : "крорт",
+                        "поехали" : "пехли" };
+  var words = str.toLowerCase().split(' ');
+  for (var i = 0; i < words.length; i++)
   {
-      return static_names[str]
+      if (words[i] in static_names)
+        {
+            words[i] = static_names[words[i]];
+        }
   }
-  return str.toUpperCase()
+  return words.join(' ')
 };
