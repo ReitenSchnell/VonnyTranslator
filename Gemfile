@@ -9,6 +9,7 @@ gem 'bootstrap-sass', '2.0.4'
 group :development, :test do
   gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
+  gem 'konacha'
 end
 
 

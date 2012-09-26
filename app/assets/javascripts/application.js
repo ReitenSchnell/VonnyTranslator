@@ -8,7 +8,7 @@
 //= require jquery_ujs
 //= require_tree .
 
-function doStuff()
+function translateIt()
 {
-    document.getElementById("txtTo").value = document.getElementById("txtFrom").value.toUpperCase()
+    document.getElementById("txtTo").value = translate(document.getElementById("txtFrom").value)
 }
