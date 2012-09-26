@@ -7,3 +7,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function doStuff()
+{
+    document.getElementById("txtTo").value = document.getElementById("txtFrom").value.toUpperCase()
+}

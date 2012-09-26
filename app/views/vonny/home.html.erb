@@ -1,8 +1,10 @@
+
 <table>
     <tr>
       <td><%= text_field_tag "txtFrom" %></td>
-      <td><%= link_to image_tag("bayan.png", :alt => "првст", :size => "35x15"), :id => "btnTranslate"%></td>
+      <td><%= link_to_function  image_tag("bayan.png", :size => "35x15", :title => 'првст'), 'doStuff();' %></td>
       <td><%= text_field_tag "txtTo" %></td>
     </tr>
 </table>
+
 
