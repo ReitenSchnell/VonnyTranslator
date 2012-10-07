@@ -1,15 +1,14 @@
 <div class="row">
-  <div class="span3">
-    <div class="input">
-        <%= text_field_tag "txtFrom" %>
-    </div>
-  </div>
-  <div class="span1">
-    <%= link_to_function  image_tag("bayan.png", :size => "35x15", :title => 'првст'), 'translateIt();', :class => "center" %>
-  </div>
-  <div class="span3">
-    <%= text_field_tag "txtTo" %>
-  </div>
-</div>
+     <div class="clearfix span4">
+        <textarea id="txtFrom"></textarea>
+     </div>
+     <div class="span1">
+       <%= link_to_function  image_tag("bayan.png", :size => "35x15", :title => 'првст'), 'translateIt();'%>
+     </div>
+     <div class="clearfix span4">
+       <textarea id="txtTo"></textarea>
+     </div>
+ </div>
+
 
 
