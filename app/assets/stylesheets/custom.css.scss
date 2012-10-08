@@ -1,0 +1,19 @@
+// Place all the styles related to the Vonny controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+vonny {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #eaeaea;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+}
