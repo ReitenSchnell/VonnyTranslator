@@ -3,17 +3,34 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 
-vonny {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #eaeaea;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-footer {
-  margin-top: 45px;
+.footer {
+  margin-top: 15px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #999;
+  float: right;
+  margin-right: 8px;
 }
+
+.vonny {
+  margin-bottom: 20px;
+  float: center;
+}
+
+body {
+  margin-left: 15px;
+}
+
+.center{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.border
+  {
+  border: 1px solid #eaeaea;
+}
+
+textarea {
+   width: 280px;
+}
+
