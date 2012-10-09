@@ -12,6 +12,7 @@ translate = function(str) {
                         "на" : "на",
                         "не" : "ен",
                         "пока" : "пка",
+                        "меня" : "мн",
                         "я" : "я" };
   var words = str.toLowerCase().split(' ');
   for (var i = 0; i < words.length; i++)
@@ -43,7 +44,10 @@ translate = function(str) {
               }
               else
               {
-                  if (j == 0 ||  (j == wordLen-2 && isVowel(word[wordLen -1])) || (j == wordLen-1 && isVowel(word[wordLen - 2])))
+                  if (j == 0
+                      || (j == wordLen-2 && isVowel(word[wordLen -1]))
+                      || (j == wordLen-1 && isVowel(word[wordLen - 2]))
+                      || (j == wordLen - 1 && wordLen == 4))
                   {
                       newWord = newWord.concat(word[j]);
                   }

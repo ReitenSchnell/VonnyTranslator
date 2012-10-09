@@ -18,7 +18,7 @@ describe('translate', function() {
   });
 
     it('should remove all vowels', function(){
-        translate("Сова, я тебе говорю, поехали на курорт").should.equal("Своа, я тб гвр, пехли на крорт");
+        translate("Сова, я тебе говорю, поехали на курорт").should.equal("Своа, я тбе гвр, пехли на крорт");
         translate("Ты принес печенько?").should.equal("т прнс пчнк?");
     });
 
