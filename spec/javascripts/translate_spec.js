@@ -19,7 +19,11 @@ describe('translate', function() {
 
     it('should remove all vowels', function(){
         translate("Сова, я тебе говорю, поехали на курорт").should.equal("Своа, я тб гвр, пехли на крорт");
-        translate("Ты принес?").should.equal("т прнс?");
+        translate("Ты принес печенько?").should.equal("т прнс пчнк?");
+    });
+
+    it('should remove all vowels except first and two last', function(){
+        translate("Оставьте меня в покое").should.equal("оствт мн в пкое");
     });
 });
 
