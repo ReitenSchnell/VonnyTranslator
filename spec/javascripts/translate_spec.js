@@ -23,7 +23,16 @@ describe('translate', function() {
     });
 
     it('should remove all vowels except first and two last', function(){
-        translate("Оставьте меня в покое").should.equal("оствт мн в пкое");
+        translate("Оставьте меня в покое").should.equal("оствт мн пкое");
+    });
+
+    it('should let o stay if it is in the end', function(){
+        translate("Вино, кино, домино").should.equal("вно, кно, дмно");
+    });
+
+    it('should skip every в except first in sentence', function(){
+        translate("В какую").should.equal("в ккую");
+        translate("Я пошел в сад").should.equal("я пшл сд");
     });
 });
 

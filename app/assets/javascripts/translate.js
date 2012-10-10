@@ -13,7 +13,9 @@ translate = function(str) {
                         "не" : "ен",
                         "пока" : "пка",
                         "меня" : "мн",
-                        "я" : "я" };
+                        "я" : "я",
+                        "печенько" : "пчнк",
+                        "просто" : "прст"};
   var words = str.toLowerCase().split(' ');
   for (var i = 0; i < words.length; i++)
   {
@@ -22,7 +24,7 @@ translate = function(str) {
       var lastChar = word[wordLen - 1];
       if (!isConsonant(lastChar) && !isVowel(lastChar))
       {
-         word = word.substr(0,wordLen - 1)
+         word = word.substr(0,wordLen - 1);
          wordLen = wordLen - 1
       }
       else
@@ -47,18 +49,27 @@ translate = function(str) {
                   if (j == 0
                       || (j == wordLen-2 && isVowel(word[wordLen -1]))
                       || (j == wordLen-1 && isVowel(word[wordLen - 2]))
-                      || (j == wordLen - 1 && wordLen == 4))
+                      || (j == wordLen - 1 && wordLen == 4)
+                      || (j == wordLen - 1 && word[j] == 'о'))
                   {
                       newWord = newWord.concat(word[j]);
                   }
               }
           }
+          if (newWord == "в" && i > 0)
+          {
+              newWord = '';
+          }
           word = newWord;
       }
       words[i] =  word + lastChar;
   }
-  return words.join(' ')
+  return words.filter(isNotEmpty).join(' ')
 };
+
+function isNotEmpty(element) {
+    return (element.length != 0);
+}
 
 isVowel = function(char)
 {
